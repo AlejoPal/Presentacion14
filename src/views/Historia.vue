@@ -1,9 +1,9 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import { PhArrowLeft } from '@phosphor-icons/vue'
+import { PhArrowLeft, PhSparkle } from '@phosphor-icons/vue'
 import Foto from '@/components/Foto.vue'
 import Capitulo from '@/components/Capitulo.vue'
-import { intro, capitulos, momentos, cierre } from '@/data/historia'
+import { intro, capitulos, momentos, cierre, proximamente } from '@/data/historia'
 </script>
 
 <template>
@@ -45,9 +45,19 @@ import { intro, capitulos, momentos, cierre } from '@/data/historia'
     </section>
 
     <!-- Cierre -->
-    <section class="mx-auto flex min-h-[80dvh] max-w-7xl flex-col items-start justify-center gap-8 px-4 py-24 md:px-8">
-      <h2 v-reveal class="max-w-4xl font-display text-5xl font-semibold leading-[1.03] tracking-tight md:text-8xl">{{ cierre.titulo }}</h2>
-      <RouterLink to="/" v-reveal="{ delay: 120 }" class="btn"><PhArrowLeft :size="18" weight="bold" /> Volver al contador</RouterLink>
+    <section class="mx-auto flex min-h-[80dvh] max-w-7xl flex-col items-start justify-center gap-6 px-4 py-24 md:px-8">
+      <h2 v-reveal class="max-w-4xl font-display text-5xl font-semibold leading-[1.03] tracking-tight md:text-7xl">{{ cierre.titulo }}</h2>
+      <p v-reveal="{ delay: 100 }" class="max-w-[50ch] text-lg leading-relaxed text-muted md:text-xl">{{ cierre.texto }}</p>
+    </section>
+
+    <!-- Proximamente -->
+    <section class="relative border-t border-line/15 bg-surface px-4 py-28 text-center md:px-8">
+      <div v-reveal class="mx-auto flex max-w-xl flex-col items-center gap-5">
+        <PhSparkle :size="36" weight="fill" class="text-accent" />
+        <h2 class="font-display text-4xl font-semibold tracking-tight md:text-6xl">{{ proximamente.titulo }}</h2>
+        <p class="text-lg leading-relaxed text-muted">{{ proximamente.texto }}</p>
+        <RouterLink to="/" class="btn mt-4"><PhArrowLeft :size="18" weight="bold" /> Volver al contador</RouterLink>
+      </div>
     </section>
   </main>
 </template>

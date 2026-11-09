@@ -1,18 +1,11 @@
 <script setup>
-import { computed, onMounted, onUnmounted } from 'vue'
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
-import { PhHeart, PhArrowRight } from '@phosphor-icons/vue'
+import { PhHeart, PhArrowRight, PhLock } from '@phosphor-icons/vue'
 import { useCountdownStore } from '@/stores/countdown'
 import { pareja } from '@/config/pareja'
 
 const store = useCountdownStore()
-let timer
-
-onMounted(() => {
-  store.tick()
-  timer = setInterval(() => store.tick(), 1000)
-})
-onUnmounted(() => clearInterval(timer))
 
 const pad = (n) => String(n).padStart(2, '0')
 const unidades = computed(() => [
@@ -59,6 +52,7 @@ const petalos = Array.from({ length: 16 }, (_, i) => ({
           Hoy es nuestro {{ pareja.dia }}
         </h1>
         <p class="mt-5 max-w-[48ch] text-lg leading-relaxed text-muted md:text-xl">{{ pareja.mensajeCelebracion }}</p>
+        <p class="mt-3 max-w-[52ch] text-lg leading-relaxed text-muted">{{ pareja.mensajeCelebracion2 }}</p>
         <p v-if="store.mesesJuntos" class="mt-3 font-display text-2xl text-accent">{{ store.mesesJuntos }} meses juntos</p>
         <div class="mt-8 flex flex-wrap items-center gap-4">
           <RouterLink to="/historia" class="btn">Ver nuestra historia <PhArrowRight :size="18" weight="bold" /></RouterLink>
@@ -90,7 +84,9 @@ const petalos = Array.from({ length: 16 }, (_, i) => ({
         <p v-if="store.mesesJuntos" class="mt-10 text-muted">
           Hoy llevamos <span class="font-medium text-ink">{{ store.mesesJuntos }} meses</span> juntos.
         </p>
-        <RouterLink to="/historia" class="btn mt-10">Nuestra historia <PhArrowRight :size="18" weight="bold" /></RouterLink>
+        <p class="mt-10 flex items-center gap-2 text-muted">
+          <PhLock :size="18" weight="bold" /> Nuestra historia se abre el {{ pareja.dia }} y el {{ pareja.dia + 1 }} de cada mes.
+        </p>
       </section>
     </div>
   </main>

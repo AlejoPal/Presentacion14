@@ -1,7 +1,18 @@
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+import { PhLock } from '@phosphor-icons/vue'
+import { useCountdownStore } from '@/stores/countdown'
 import { pareja } from '@/config/pareja'
 import OrbesFondo from '@/components/OrbesFondo.vue'
+
+const store = useCountdownStore()
+let timer
+onMounted(() => {
+  store.tick()
+  timer = setInterval(() => store.tick(), 1000)
+})
+onUnmounted(() => clearInterval(timer))
 </script>
 
 <template>
@@ -11,7 +22,10 @@ import OrbesFondo from '@/components/OrbesFondo.vue'
       <RouterLink to="/" class="font-display text-lg font-semibold tracking-tight">{{ pareja.marca }}</RouterLink>
       <div class="flex items-center gap-1 text-sm">
         <RouterLink to="/" class="nav-link">Contador</RouterLink>
-        <RouterLink to="/historia" class="nav-link">Nuestra historia</RouterLink>
+        <RouterLink v-if="store.historiaAbierta" to="/historia" class="nav-link">Nuestra historia</RouterLink>
+        <span v-else class="nav-link flex cursor-not-allowed items-center gap-1.5 opacity-70" title="Se abre el 14 y el 15 de cada mes">
+          <PhLock :size="14" weight="bold" /> Nuestra historia
+        </span>
       </div>
     </nav>
   </header>

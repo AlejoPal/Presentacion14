@@ -7,7 +7,8 @@ export const pareja = {
   // Fecha en que empezaron (AAAA-MM-DD). Si la pones, se muestra "N meses juntos". Null para ocultar.
   desde: null,
   // Mensaje que aparece el 14 y el 15
-  mensajeCelebracion: 'Hoy es nuestro día. Gracias por cada mes a tu lado.',
+  mensajeCelebracion: 'Te quiero mucho. Gracias por cada mes a tu lado y por hacerme tan feliz.',
+  mensajeCelebracion2: 'Cada momento contigo lo disfruto demasiado, y lo único que quiero es seguir compartiendo mi vida contigo, con tu familia y con todo tu mundo.',
   // Frase bajo el contador
-  frase: 'Cada mes llega un 14, y cada 14 es una buena excusa para celebrarnos.',
+  frase: 'Cada mes llega un 14, y para mí cada 14 es una excusa más para decirte cuánto te quiero.',
 }

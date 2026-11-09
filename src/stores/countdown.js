@@ -29,6 +29,10 @@ export const useCountdownStore = defineStore('countdown', {
       const d = this.date.getDate()
       return d === pareja.dia || d === pareja.dia + 1
     },
+    // Nuestra historia solo se abre mientras se celebra
+    historiaAbierta() {
+      return this.celebrating
+    },
     // Proximo 14 a contar. Si ya estamos celebrando, el del mes siguiente.
     nextTarget() {
       const d = this.date

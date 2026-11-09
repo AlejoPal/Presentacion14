@@ -3,7 +3,7 @@
 
 export const intro = {
   titulo: 'Nuestra historia',
-  texto: 'Algunos capítulos, algunas fotos y todo lo que viene después.',
+  texto: 'Un poco de lo que hemos vivido y de lo mucho que te quiero.',
   foto: '/fotos/portada.jpg',
   pos: 'center 30%',
 }
@@ -12,14 +12,14 @@ export const capitulos = [
   {
     fecha: 'Primer capítulo',
     titulo: 'Juntos de viaje',
-    texto: 'Aeropuertos, madrugones y selfies cansados. Cualquier camino se siente corto contigo.',
+    texto: 'Aeropuertos, madrugones y selfies cansados, y aun así me encanta cada minuto contigo. Hasta lo más simple se siente especial a tu lado.',
     foto: '/fotos/01.jpg',
     layout: 'split-left',
   },
   {
     fecha: 'Segundo capítulo',
     titulo: 'Noches que se quedan',
-    texto: 'Velas, música y tú en medio de todo. Hay noches que uno quiere guardar enteras.',
+    texto: 'Contigo hasta una noche cualquiera se vuelve inolvidable. Disfruto demasiado cada momento que paso a tu lado y quisiera guardarlos todos.',
     foto: '/fotos/02.jpg',
     pos: 'center 35%',
     layout: 'full',
@@ -27,14 +27,14 @@ export const capitulos = [
   {
     fecha: 'Tercer capítulo',
     titulo: 'Al aire libre',
-    texto: 'Ríos, caminos y sol. Contigo hasta perderse se vuelve un buen plan.',
+    texto: 'Contigo cualquier plan es el mejor plan. Me encanta cada tiempo que compartimos, y cada vez quiero más.',
     foto: '/fotos/03.jpg',
     layout: 'split-right',
   },
   {
     fecha: 'Hoy',
     titulo: 'Y seguimos',
-    texto: 'Cada 14 hay un mes más, y todavía quedan muchos por escribir juntos.',
+    texto: 'Te quiero mucho. Solo me dan ganas de seguir compartiendo mi vida contigo, con tu familia y con todo tu mundo.',
     foto: '/fotos/04.jpg',
     pos: 'center 40%',
     layout: 'full',
@@ -53,5 +53,11 @@ export const momentos = [
 ]
 
 export const cierre = {
-  titulo: 'Lo mejor todavía no está escrito',
+  titulo: 'Gracias por dejarme entrar en tu mundo',
+  texto: 'Quiero conocer más de ti, de tu familia, de tus lugares y de tus días, y que tú seas parte de los míos.',
+}
+
+export const proximamente = {
+  titulo: 'Próximamente',
+  texto: 'Vendrán más historias. Todavía nos faltan muchos 14 por vivir.',
 }
