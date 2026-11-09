@@ -32,6 +32,28 @@ export const capitulos = [
     layout: 'split-right',
   },
   {
+    fecha: 'Cuarto capítulo',
+    titulo: 'Contigo hasta el final del sendero',
+    texto: 'Caminar, reírnos y perdernos un rato. Me encanta cada tiempo que paso a tu lado, sin prisa y sin nada más.',
+    foto: '/fotos/05.jpg',
+    layout: 'split-left',
+  },
+  {
+    fecha: 'Quinto capítulo',
+    titulo: 'Ver el mundo juntos',
+    texto: 'Desde lo alto todo se ve más bonito, y más aún si es contigo. Quiero conocer muchos lugares a tu lado.',
+    foto: '/fotos/06.jpg',
+    pos: 'center 40%',
+    layout: 'full',
+  },
+  {
+    fecha: 'Sexto capítulo',
+    titulo: 'Tardes de museo',
+    texto: 'Me gusta descubrir lo que te gusta y quedarme mirándote mientras lo disfrutas. Contigo aprendo algo nuevo cada día.',
+    foto: '/fotos/07.jpg',
+    layout: 'split-right',
+  },
+  {
     fecha: 'Hoy',
     titulo: 'Y seguimos',
     texto: 'Te quiero mucho. Solo me dan ganas de seguir compartiendo mi vida contigo, con tu familia y con todo tu mundo.',
@@ -50,6 +72,9 @@ export const momentos = [
   { foto: '/fotos/m6.jpg', pie: 'Pausa con café' },
   { foto: '/fotos/m7.jpg', pie: 'Luz de ventana' },
   { foto: '/fotos/m8.jpg', pie: 'Un alto en el camino' },
+  { foto: '/fotos/m9.jpg', pie: 'Entre retratos' },
+  { foto: '/fotos/m10.jpg', pie: 'Noche junto al río' },
+  { foto: '/fotos/m11.jpg', pie: 'Orilla tranquila' },
 ]
 
 export const cierre = {
