@@ -12,7 +12,7 @@ defineProps({ item: Object, index: Number })
     <!-- Variante a pantalla completa -->
     <template v-if="item.layout === 'full'">
       <div class="absolute inset-0">
-        <Foto :src="item.foto" :alt="item.titulo" style="--r: 0px" />
+        <Foto :src="item.foto" :alt="item.titulo" :pos="item.pos" style="--r: 0px" />
         <div class="absolute inset-0" style="background: linear-gradient(to top, rgb(20 11 34 / .92), rgb(20 11 34 / .4) 55%, rgb(20 11 34 / .1))" />
       </div>
       <div class="relative mx-auto w-full max-w-7xl px-4 pb-16 pt-32 md:px-8 md:pb-24">
@@ -32,7 +32,7 @@ defineProps({ item: Object, index: Number })
         :class="item.layout === 'split-left' ? 'md:col-start-1' : 'md:order-2 md:col-start-7'"
       >
         <div class="h-full w-full transition-transform duration-500 hover:rotate-0" :class="item.layout === 'split-left' ? '-rotate-2' : 'rotate-2'">
-          <Foto :src="item.foto" :alt="item.titulo" />
+          <Foto :src="item.foto" :alt="item.titulo" :pos="item.pos" />
         </div>
       </div>
       <div

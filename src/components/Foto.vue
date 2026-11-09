@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { PhImageSquare } from '@phosphor-icons/vue'
 
-defineProps({ src: String, alt: { type: String, default: '' } })
+defineProps({ src: String, alt: { type: String, default: '' }, pos: { type: String, default: 'center' } })
 const roto = ref(false)
 const dev = import.meta.env.DEV
 </script>
@@ -16,6 +16,7 @@ const dev = import.meta.env.DEV
       loading="lazy"
       decoding="async"
       class="h-full w-full object-cover"
+      :style="{ objectPosition: pos }"
       @error="roto = true"
     />
     <div

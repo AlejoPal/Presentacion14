@@ -16,7 +16,7 @@ import { intro, capitulos, momentos, cierre } from '@/data/historia'
       </div>
       <div v-reveal="{ delay: 200 }" class="mx-auto aspect-[4/5] w-full max-w-sm md:col-span-5 md:col-start-8 md:max-w-none">
         <div class="h-full w-full rotate-3 transition-transform duration-500 hover:rotate-0">
-          <Foto :src="intro.foto" alt="Nosotros" />
+          <Foto :src="intro.foto" alt="Nosotros" :pos="intro.pos" />
         </div>
       </div>
     </section>
