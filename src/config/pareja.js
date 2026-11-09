@@ -1,7 +1,7 @@
 // Edita estos datos. Todo lo que ve ella sale de aqui y de data/historia.js
 export const pareja = {
   // Iniciales o apodos que aparecen arriba a la izquierda
-  marca: 'A & M',
+  marca: 'A & Y',
   // Dia del mes que se celebra
   dia: 14,
   // Fecha en que empezaron (AAAA-MM-DD). Si la pones, se muestra "N meses juntos". Null para ocultar.
